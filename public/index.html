@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1"
+    />
+    <title>Stranger Things</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/imgs/website_icon.png"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link href="./assets/css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="w-full bg-black">
+      <div>
+        <div
+          class="max-w-[1420px] mx-auto flex justify-between px-4 md:px-16 h-20 md:h-28 relative"
+        >
+          <ul
+            class="font-barlow border-b border-[#474747] items-center font-bold sm:text-4xl md:text-5xl lg:text-6xl text-[#474747] hidden md:flex gap-8 uppercase"
+          >
+            <li class="hover:text-[#ed1c24] hover:mt-[-1.4rem] duration-300">
+              <a href="#recap">Recap</a>
+            </li>
+            <li class="hover:text-[#ed1c24] hover:mt-[-1.4rem] duration-300">
+              <a href="#characters">Characters</a>
+            </li>
+            <li class="hover:text-[#ed1c24] hover:mt-[-1.4rem] duration-300">
+              <a href="#">Cast</a>
+            </li>
+          </ul>
+          <div
+            class="w-[200px] md:w-[500px] flex md:justify-center md:pt-9 md:absolute md:left-[50%] md:translate-x-[-50%] md:top-[50%]"
+          >
+            <img src="./assets/imgs/navbar_logo.png" alt="navbar_logo" />
+          </div>
+          <ul
+            class="font-barlow border-b border-[#474747] items-center font-bold sm:text-4xl md:text-5xl lg:text-6xl text-[#474747] hidden md:flex gap-8 uppercase"
+          >
+            <li class="hover:text-[#ed1c24] hover:mt-[-1.4rem] duration-300">
+              <a href="#trailer">Trailer</a>
+            </li>
+            <li class="hover:text-[#ed1c24] hover:mt-[-1.4rem] duration-300">
+              <a href="#">Watch</a>
+            </li>
+            <li class="hover:text-[#ed1c24] hover:mt-[-1.4rem] duration-300">
+              <a href="#follow">Follow</a>
+            </li>
+          </ul>
+          <div class="h-full my-auto md:hidden">
+            <i
+              id="menu_icon"
+              class="bx bx-menu text-red-700 text-6xl duration-300 opacity-60 hover:opacity-100"
+            ></i>
+            <img
+              id="close_menu"
+              class="relative top-[0.8rem] w-[30px] hidden duration-300 opacity-60 hover:opacity-100"
+              src="./assets/imgs/close_icon.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div
+          id="sidebar"
+          class="sidebar fixed z-20 h-screen w-full bg-black text-red-800 text-center pt-8 ease-linear duration-300 ml-[-100%] overflow-y-auto"
+        >
+          <ul
+            id="header_link"
+            class="font-barlow py-[5rem] text-4xl md:text-5xl lg:text-6xl gap-[3.5rem] flex flex-col uppercase font-bold text-[#474747]"
+          >
+            <li
+              class="hover:text-[#ed1c24] hover:ml-5 duration-200"
+              style="-webkit-tap-highlight-color: transparent"
+            >
+              <a href="#recap">Recap</a>
+            </li>
+            <li
+              class="hover:text-[#ed1c24] hover:ml-5 duration-300"
+              style="-webkit-tap-highlight-color: transparent"
+            >
+              <a href="#characters">Characters</a>
+            </li>
+            <li
+              class="hover:text-[#ed1c24] hover:ml-5 duration-300"
+              style="-webkit-tap-highlight-color: transparent"
+            >
+              <a href="#">Cast</a>
+            </li>
+            <li
+              class="hover:text-[#ed1c24] hover:ml-5 duration-300"
+              style="-webkit-tap-highlight-color: transparent"
+            >
+              <a href="#trailer">Trailer</a>
+            </li>
+            <li
+              class="hover:text-[#ed1c24] hover:ml-5 duration-300"
+              style="-webkit-tap-highlight-color: transparent"
+            >
+              <a href="#">Watch</a>
+            </li>
+            <li
+              class="hover:text-[#ed1c24] hover:ml-5 duration-300"
+              style="-webkit-tap-highlight-color: transparent"
+            >
+              <a href="#follow">Follow</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- wallpaper -->
+    <div
+      class="md:mt-[8rem] relative lg:h-screen h-[222px] md:h-[400px] overflow-hidden"
+    >
+      <img
+        class="absolute md:top-[50px] animate-Loop opacity-0"
+        src="./assets/imgs/wallpaper1.png"
+        alt="wallpaper"
+      />
+      <img
+        class="absolute md:top-[50px] animate-Loop opacity-0 animation-delay-5"
+        src="./assets/imgs/wallpaper2.png"
+        alt="wallpaper"
+      />
+      <img
+        class="absolute md:top-[50px] animate-Loop opacity-0 animation-delay-10"
+        src="./assets/imgs/wallpaper3.png"
+        alt="wallpaper"
+      />
+      <img
+        class="absolute md:top-[50px] animate-Loop opacity-0 animation-delay-15"
+        src="./assets/imgs/wallpaper4.png"
+        alt="wallpaper"
+      />
+      <img
+        class="absolute md:top-[50px] animate-Loop opacity-0 animation-delay-20"
+        src="./assets/imgs/wallpaper5.png"
+        alt="wallpaper"
+      />
+      <!-- Trailer icon  -->
+      <div
+        class="px-8 md:px-[89.6px] absolute text-2xl md:text-4xl lg:text-6xl z-10 top-[10rem] flex items-center gap-[1rem] md:bottom-0"
+      >
+        <div class="text-6xl md:text-7xl lg:text-9xl">
+          <i
+            class="bx bx-play-circle text-[#474747] hover:scale-110 hover:text-[#ed1c24] cursor-pointer duration-300"
+            style="-webkit-tap-highlight-color: transparent"
+          ></i>
+        </div>
+        <div class="text-[#ed1c24] cursor-default">
+          <p>Trailer</p>
+          <h3 class="font-bold text-[#474747]">WATCH NOW</h3>
+        </div>
+      </div>
+      <!-- Sound icon -->
+      <div
+        class="px-8 md:px-[89.6px] absolute z-10 top-[10rem] right-0 flex items-center gap-[1rem] md:bottom-0"
+      >
+        <h3
+          class="text-2xl md:text-4xl lg:text-6xl text-[#474747] font-bold cursor-default"
+        >
+          SOUND
+        </h3>
+        <i
+          class="bx bxl-deezer text-6xl md:text-7xl lg:text-9xl text-[#ed1c24]"
+        ></i>
+      </div>
+    </div>
+    <!-- Recap -->
+    <div id="recap" class="relative">
+      <div class="absolute grid h-full w-full top-0 grid-rows-3 z-10">
+        <div
+          class="row-span-1 text-white flex flex-col justify-center items-center cursor-default"
+        >
+          <h2
+            class="uppercase font-second font-bold text-6xl md:text-9xl tracking-[.5rem] text-[#ed1c24] drop-shadow-2xl"
+          >
+            Recap
+          </h2>
+          <p class="text-center font-second text-2xl md:text-4xl lg:text-6xl">
+            Select a season to explore
+          </p>
+        </div>
+        <!-- items recap md -->
+        <div class="row-span-2 hidden lg:flex">
+          <div class="w-[25%] bg-cover mx-auto h-full relative p-[2rem]">
+            <div
+              class="group cursor-pointer absolute top-[20%] w-[70%] shadow-itemShadown hover:shadow-itemShadownActive overflow-hidden ease-linear duration-300 hover:scale-110"
+            >
+              <h2
+                class="absolute lg:text-4xl xl:text-5xl left-[50%] translate-x-[-50%] text-white uppercase font-second font-bold top-[-4rem] group-hover:top-[1rem] duration-500"
+              >
+                season 1
+              </h2>
+              <img
+                class="mx-auto"
+                src="./assets/imgs/poster_season_1.jpg"
+                alt="poster_season_1"
+              />
+            </div>
+          </div>
+          <div class="w-[25%] bg-cover mx-auto h-full relative p-[2rem]">
+            <div
+              class="group cursor-pointer absolute top-0 w-[70%] shadow-itemShadown hover:shadow-itemShadownActive overflow-hidden ease-linear duration-300 hover:scale-110"
+            >
+              <h2
+                class="absolute lg:text-4xl xl:text-5xl left-[50%] translate-x-[-50%] text-white uppercase font-second font-bold top-[-4rem] group-hover:top-[1rem] duration-500"
+              >
+                season 2
+              </h2>
+              <img
+                class="mx-auto"
+                src="./assets/imgs/poster_season_1.jpg"
+                alt="poster_season_1"
+              />
+            </div>
+          </div>
+          <div class="w-[25%] bg-cover mx-auto h-full relative p-[2rem]">
+            <div
+              class="group cursor-pointer absolute top-0 w-[70%] shadow-itemShadown hover:shadow-itemShadownActive overflow-hidden ease-linear duration-300 hover:scale-110"
+            >
+              <h2
+                class="absolute lg:text-4xl xl:text-5xl left-[50%] translate-x-[-50%] text-white uppercase font-second font-bold top-[-4rem] group-hover:top-[1rem] duration-500"
+              >
+                season 3
+              </h2>
+              <img
+                class="mx-auto"
+                src="./assets/imgs/poster_season_1.jpg"
+                alt="poster_season_1"
+              />
+            </div>
+          </div>
+          <div class="w-[25%] bg-cover mx-auto h-full relative p-[2rem]">
+            <div
+              class="group cursor-pointer absolute top-[20%] w-[70%] shadow-itemShadown hover:shadow-itemShadownActive overflow-hidden ease-linear duration-300 hover:scale-110"
+            >
+              <h2
+                class="absolute lg:text-4xl xl:text-5xl left-[50%] translate-x-[-50%] text-white uppercase font-second font-bold top-[-4rem] group-hover:top-[1rem] duration-500"
+              >
+                season 4
+              </h2>
+              <img
+                class="mx-auto"
+                src="./assets/imgs/poster_season_1.jpg"
+                alt="poster_season_1"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-recap absolute top-0 w-full h-full"></div>
+      <div>
+        <img src="./assets/imgs/recap_background.jpg" alt="recap_background" />
+      </div>
+    </div>
+    <!-- mobile items -->
+    <div
+      class="grid grid-rows-2 grid-cols-2 px-8 mt-[4rem] gap-[4rem] lg:hidden"
+    >
+      <div
+        class="group cursor-pointer rounded-3xl shadow-itemShadown hover:shadow-itemShadownActive relative overflow-hidden ease-linear duration-300 hover:scale-110 md:hover:scale-105"
+      >
+        <h2
+          class="absolute left-[50%] translate-x-[-50%] text-white uppercase font-second font-bold top-[-4rem] text-3xl sm:text-4xl md:text-7xl group-hover:top-[1rem] duration-300"
+        >
+          season 1
+        </h2>
+        <img
+          class="w-full h-full rounded-3xl"
+          src="./assets/imgs/poster_season_1.jpg"
+          alt=""
+        />
+      </div>
+      <div
+        class="group cursor-pointer rounded-3xl shadow-itemShadown hover:shadow-itemShadownActive relative overflow-hidden ease-linear duration-300 hover:scale-110 md:hover:scale-105"
+      >
+        <h2
+          class="absolute left-[50%] translate-x-[-50%] text-white uppercase font-second font-bold top-[-4rem] text-3xl sm:text-4xl md:text-7xl group-hover:top-[1rem] duration-300"
+        >
+          season 2
+        </h2>
+        <img
+          class="w-full h-full rounded-3xl"
+          src="./assets/imgs/poster_season_2.jpg"
+          alt=""
+        />
+      </div>
+      <div
+        class="group cursor-pointer rounded-3xl shadow-itemShadown hover:shadow-itemShadownActive relative overflow-hidden ease-linear duration-300 hover:scale-110 md:hover:scale-105"
+      >
+        <h2
+          class="absolute left-[50%] translate-x-[-50%] text-white uppercase font-second font-bold top-[-4rem] text-3xl sm:text-4xl md:text-7xl group-hover:top-[1rem] duration-300"
+        >
+          season 3
+        </h2>
+        <img
+          class="w-full h-full rounded-3xl"
+          src="./assets/imgs/poster_season_3.jpg"
+          alt=""
+        />
+      </div>
+      <div
+        class="group cursor-pointer rounded-3xl shadow-itemShadown hover:shadow-itemShadownActive relative overflow-hidden ease-linear duration-300 hover:scale-110 md:hover:scale-105"
+      >
+        <h2
+          class="absolute left-[50%] translate-x-[-50%] text-white uppercase font-second font-bold top-[-4rem] text-3xl sm:text-4xl md:text-7xl group-hover:top-[1rem] duration-300"
+        >
+          season 4
+        </h2>
+        <img
+          class="w-full h-full rounded-3xl"
+          src="./assets/imgs/poster_season_4.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <!-- trailer -->
+
+    <div
+      id="trailer"
+      class="grid relative pt-[2rem] grid-rows-trailer mt-[3rem] md:pt-[3rem] lg:pt-[4rem] xl:pt-[6rem]"
+      style="
+        background-image: url('./assets/imgs/trailer_background.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+      "
+    >
+      <!-- <img
+        class="absolute"
+        src="./assets/imgs/trailer_background.jpg"
+        alt="trailer_background"
+      /> -->
+      <div
+        class="row-span-1 text-white flex flex-col items-center justify-center"
+      >
+        <h2
+          class="uppercase font-second font-bold text-6xl md:text-7xl lg:text-9xl text-primary"
+        >
+          Trailer
+        </h2>
+        <p class="text-xl sm:text-2xl md:text-4xl">
+          Something's coming. Something hungry for blood.
+        </p>
+      </div>
+      <!-- slider trailer items -->
+      <div class="trailer row-span-3">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div
+              class="swiper-slide sm:w-[400px] sm:h-[300px] md:w-[500px] md:h-[400px] lg:w-[700px] lg:h[600px] xl:w-[800px] xl:h-[600px]"
+            >
+              <div class="h-full relative">
+                <img
+                  class="h-full"
+                  src="./assets/imgs/trailer_main_1.jpg"
+                  alt="trailer_main_1"
+                />
+                <div class="text-6xl md:text-7xl lg:text-9xl">
+                  <i
+                    data-id="1"
+                    class="btn_play bx bx-play-circle text-[#474747] hover:scale-110 hover:text-[#ed1c24] cursor-pointer duration-300 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
+                    style="-webkit-tap-highlight-color: transparent"
+                  ></i>
+                </div>
+              </div>
+            </div>
+            <div
+              class="swiper-slide sm:w-[400px] sm:h-[300px] md:w-[500px] md:h-[400px] lg:w-[700px] lg:h[600px] xl:w-[800px] xl:h-[600px]"
+            >
+              <div class="h-full relative">
+                <img
+                  class="h-full"
+                  src="./assets/imgs/trailer_main_2.jpg"
+                  alt="trailer_main_2"
+                />
+                <div class="text-6xl md:text-7xl lg:text-9xl">
+                  <i
+                    data-id="2"
+                    class="btn_play bx bx-play-circle text-[#474747] hover:scale-110 hover:text-[#ed1c24] cursor-pointer duration-300 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
+                    style="-webkit-tap-highlight-color: transparent"
+                  ></i>
+                </div>
+              </div>
+            </div>
+            <div
+              class="swiper-slide sm:w-[400px] sm:h-[300px] md:w-[500px] md:h-[400px] lg:w-[700px] lg:h[600px] xl:w-[800px] xl:h-[600px]"
+            >
+              <div class="h-full relative">
+                <img
+                  class="h-full"
+                  src="./assets/imgs/trailer_main_3.jpg"
+                  alt="trailer_main_3"
+                />
+                <div class="text-6xl md:text-7xl lg:text-9xl">
+                  <i
+                    data-id="3"
+                    class="btn_play bx bx-play-circle text-[#474747] hover:scale-110 hover:text-[#ed1c24] cursor-pointer duration-300 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
+                    style="-webkit-tap-highlight-color: transparent"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="bg-recap absolute top-0 w-full h-full"></div>
+    </div>
+    <!-- Play video trailer -->
+    <div class="relative">
+      <div
+        class="video1 fixed video1 ml-[-100%] h-screen w-full top-0 bottom-0 bg-black z-30 flex justify-center items-center duration-500"
+      >
+        <div
+          class="absolute pt-[56.2%] top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] w-[100%]"
+        >
+          <iframe
+            class="absolute rounded-[1rem] shadow-itemShadownActive top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] h-[70%] w-[80%]"
+            width="80%"
+            height="80%"
+            src="https://www.youtube.com/embed/mnd7sFt5c3A?enablejsapi=1&version=3&playerapiid=ytplayer"
+          >
+          </iframe>
+        </div>
+        <img
+          data-id="1"
+          id="close_video"
+          class="absolute right-[2rem] top-[2rem] hover:cursor-pointer opacity-60 hover:opacity-100"
+          style="-webkit-tap-highlight-color: transparent"
+          src="./assets/imgs/close_icon.png"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="relative">
+      <div
+        class="video2 fixed video1 ml-[-100%] h-screen w-full top-0 bottom-0 bg-black z-30 flex justify-center items-center duration-500"
+      >
+        <div
+          class="absolute pt-[56.2%] top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] w-[100%]"
+        >
+          <iframe
+            class="absolute rounded-[1rem] shadow-itemShadownActive top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] h-[70%] w-[80%]"
+            width="400"
+            height="345"
+            allowfullscreen
+            src="https://www.youtube.com/embed/b9EkMc79ZSU?enablejsapi=1&version=3&playerapiid=ytplayer"
+          >
+          </iframe>
+        </div>
+        <img
+          data-id="2"
+          id="close_video"
+          class="absolute right-[2rem] top-[2rem] hover:cursor-pointer opacity-60 hover:opacity-100"
+          style="-webkit-tap-highlight-color: transparent"
+          src="./assets/imgs/close_icon.png"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="relative">
+      <div
+        class="video3 data-id='3' fixed video1 ml-[-100%] h-screen w-full top-0 bottom-0 bg-black z-30 flex justify-center items-center duration-500"
+      >
+        <div
+          class="absolute pt-[56.2%] top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] w-[100%]"
+        >
+          <iframe
+            class="absolute rounded-[1rem] shadow-itemShadownActive top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] h-[70%] w-[80%]"
+            width="400"
+            height="345"
+            src="https://www.youtube.com/embed/R1ZXOOLMJ8s?enablejsapi=1&version=3&playerapiid=ytplayer"
+          >
+          </iframe>
+        </div>
+        <img
+          data-id="3"
+          id="close_video"
+          class="absolute right-[2rem] top-[2rem] hover:cursor-pointer opacity-60 hover:opacity-100"
+          style="-webkit-tap-highlight-color: transparent"
+          src="./assets/imgs/close_icon.png"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <!-- Characters -->
+    <div id="characters" class="relative flex w-full flex-row md:mt-[5rem]">
+      <div
+        class="hover_figure hover_hopper group absolute w-[5%] h-[25%] bg-transparent top-[45%] left-[47%] z-10 before:bg-transparent before:hidden hover:before:block before:left-[-70%] before:top-[-30%] before:w-[100%] before:h-[100%] before:absolute before:content-['']"
+      >
+        <div
+          class="select_hopper absolute hidden group-hover:block duration-300 top-[-27%] shadow-itemShadownActive left-[-150%] md:text-3xl hover:cursor-pointer hover:scale-110 bg-black text-primary font-bold font-second p-[17%] rounded-2xl"
+        >
+          Hopper
+        </div>
+      </div>
+      <div
+        class="hover_figure hover_joyce group absolute w-[5%] h-[17%] bg-transparent top-[40%] left-[53%] z-10 before:bg-transparent before:hidden hover:before:block before:left-[-70%] before:top-[-30%] before:w-[100%] before:h-[100%] before:absolute before:content-['']"
+      >
+        <div
+          class="absolute hidden group-hover:block duration-300 top-[-27%] shadow-itemShadownActive left-[-140%] md:text-3xl hover:cursor-pointer hover:scale-110 bg-black text-primary font-bold font-second p-[17%] rounded-2xl"
+        >
+          Joyce
+        </div>
+      </div>
+      <div
+        class="hover_figure group hover_lucas absolute w-[4%] h-[20%] bg-transparent top-[36%] left-[59%] z-10 before:bg-transparent before:hidden hover:before:block before:left-[-70%] before:top-[-30%] before:w-[100%] before:h-[100%] before:absolute before:content-['']"
+      >
+        <div
+          class="absolute hidden group-hover:block duration-300 top-[-27%] shadow-itemShadownActive left-[-140%] md:text-3xl hover:cursor-pointer hover:scale-110 bg-black text-primary font-bold font-second p-[17%] rounded-2xl"
+        >
+          Lucas
+        </div>
+      </div>
+      <div
+        class="hover_figure group hover_max absolute w-[6%] h-[19%] bg-transparent top-[25%] left-[64%] z-10 before:bg-transparent before:hidden hover:before:block before:left-[-70%] before:top-[-30%] before:w-[100%] before:h-[100%] before:absolute before:content-['']"
+      >
+        <div
+          class="absolute hidden group-hover:block duration-300 top-[-27%] shadow-itemShadownActive left-[-100%] md:text-3xl hover:cursor-pointer hover:scale-110 bg-black text-primary font-bold font-second p-[17%] rounded-2xl"
+        >
+          Max
+        </div>
+      </div>
+      <div
+        class="hover_figure group hover_eleven absolute w-[7%] h-[25%] bg-transparent top-[13%] left-[73%] z-10 before:bg-transparent before:hidden hover:before:block before:left-[-70%] before:top-[-30%] before:w-[100%] before:h-[100%] before:absolute before:content-['']"
+      >
+        <div
+          class="absolute hidden group-hover:block duration-300 top-[-27%] shadow-itemShadownActive left-[-100%] md:text-3xl hover:cursor-pointer hover:scale-110 bg-black text-primary font-bold font-second p-[17%] rounded-2xl"
+        >
+          Eleven
+        </div>
+      </div>
+      <div
+        class="hover_figure group hover_mike absolute w-[6%] h-[14%] bg-transparent top-[28%] left-[81%] z-10 before:bg-transparent before:hidden hover:before:block before:left-[-70%] before:top-[-30%] before:w-[100%] before:h-[100%] before:absolute before:content-['']"
+      >
+        <div
+          class="absolute hidden group-hover:block duration-300 top-[-27%] shadow-itemShadownActive left-[-100%] md:text-3xl hover:cursor-pointer hover:scale-110 bg-black text-primary font-bold font-second p-[17%] rounded-2xl"
+        >
+          Mike
+        </div>
+      </div>
+      <div
+        class="hover_figure group hover_dustin absolute w-[6%] h-[14%] bg-transparent top-[45%] left-[81%] z-10 before:bg-transparent before:hidden hover:before:block before:left-[-70%] before:top-[-30%] before:w-[100%] before:h-[100%] before:absolute before:content-['']"
+      >
+        <div
+          class="absolute hidden group-hover:block duration-300 top-[-27%] shadow-itemShadownActive left-[-100%] md:text-3xl hover:cursor-pointer hover:scale-110 bg-black text-primary font-bold font-second p-[17%] rounded-2xl"
+        >
+          Dustin
+        </div>
+      </div>
+      <div
+        class="hover_figure group hover_steven absolute w-[6%] h-[16%] bg-transparent top-[63%] left-[80%] z-10 before:bg-transparent before:hidden hover:before:block before:right-[-70%] before:top-[-50%] before:w-[100%] before:h-[100%] before:absolute before:content-['']"
+      >
+        <div
+          class="absolute hidden group-hover:block duration-300 top-[-50%] shadow-itemShadownActive right-[-90%] md:text-3xl hover:cursor-pointer hover:scale-110 bg-black text-primary font-bold font-second p-[17%] rounded-2xl"
+        >
+          Steven
+        </div>
+      </div>
+      <div
+        class="hover_figure group hover_erica absolute w-[3%] h-[14%] bg-transparent top-[61%] left-[87%] z-10 before:bg-transparent before:hidden hover:before:block before:left-[-70%] before:top-[-30%] before:w-[100%] before:h-[100%] before:absolute before:content-['']"
+      >
+        <div
+          class="absolute hidden group-hover:block duration-300 top-[-27%] shadow-itemShadownActive left-[-100%] md:text-3xl hover:cursor-pointer hover:scale-110 bg-black text-primary font-bold font-second p-[17%] rounded-2xl"
+        >
+          Erica
+        </div>
+      </div>
+      <div
+        class="hover_figure group hover_will absolute w-[3%] h-[8%] bg-transparent top-[55%] left-[91%] z-10 before:bg-transparent before:hidden hover:before:block before:left-[-70%] before:top-[-30%] before:w-[100%] before:h-[100%] before:absolute before:content-['']"
+      >
+        <div
+          class="absolute hidden group-hover:block duration-300 top-[-27%] shadow-itemShadownActive left-[-100%] md:text-3xl hover:cursor-pointer hover:scale-110 bg-black text-primary font-bold font-second p-[17%] rounded-2xl"
+        >
+          Will
+        </div>
+      </div>
+      <div
+        class="hover_figure group hover_jonathan absolute w-[3%] h-[9%] bg-transparent top-[64%] left-[91%] z-10 before:bg-transparent before:hidden hover:before:block before:left-[-70%] before:top-[-30%] before:w-[100%] before:h-[100%] before:absolute before:content-['']"
+      >
+        <div
+          class="absolute hidden group-hover:block duration-300 bottom-[-53%] shadow-itemShadownActive left-[-100%] md:text-3xl hover:cursor-pointer hover:scale-110 bg-black text-primary font-bold font-second p-[17%] rounded-2xl"
+        >
+          Jonathan
+        </div>
+      </div>
+      <div
+        class="hover_figure group hover_argyle absolute w-[3%] h-[9%] bg-transparent top-[64%] left-[95%] z-10 before:bg-transparent before:hidden hover:before:block before:left-[-57%] before:bottom-[-40%] before:w-[100%] before:h-[100%] before:absolute before:content-['']"
+      >
+        <div
+          class="absolute hidden group-hover:block duration-300 bottom-[-58%] shadow-itemShadownActive left-[-100%] md:text-3xl hover:cursor-pointer hover:scale-110 bg-black text-primary font-bold font-second p-[17%] rounded-2xl"
+        >
+          Argyle
+        </div>
+      </div>
+      <div
+        class="hover_figure group hover_eddie absolute w-[4%] h-[14%] bg-transparent top-[61%] left-[75%] z-10 before:bg-transparent before:hidden hover:before:block before:right-[-70%] before:top-[-30%] before:w-[100%] before:h-[100%] before:absolute before:content-['']"
+      >
+        <div
+          class="absolute hidden group-hover:block duration-300 top-[-27%] shadow-itemShadownActive right-[-100%] md:text-3xl hover:cursor-pointer hover:scale-110 bg-black text-primary font-bold font-second p-[17%] rounded-2xl"
+        >
+          Eddie
+        </div>
+      </div>
+      <div
+        class="hover_figure group hover_robin absolute w-[4%] h-[14%] bg-transparent top-[54%] left-[71%] z-10 before:bg-transparent before:hidden hover:before:block before:right-[-70%] before:top-[-30%] before:w-[100%] before:h-[100%] before:absolute before:content-['']"
+      >
+        <div
+          class="absolute hidden group-hover:block duration-300 top-[-27%] shadow-itemShadownActive right-[-100%] md:text-3xl hover:cursor-pointer hover:scale-110 bg-black text-primary font-bold font-second p-[17%] rounded-2xl"
+        >
+          Robin
+        </div>
+      </div>
+      <div
+        class="hover_figure group hover_nancy absolute w-[4%] h-[14%] bg-transparent top-[46%] left-[67%] z-10 before:bg-transparent before:hidden hover:before:block before:left-[-70%] before:top-[-30%] before:w-[100%] before:h-[100%] before:absolute before:content-['']"
+      >
+        <div
+          class="absolute hidden group-hover:block duration-300 top-[-27%] shadow-itemShadownActive left-[-100%] md:text-3xl hover:cursor-pointer hover:scale-110 bg-black text-primary font-bold font-second p-[17%] rounded-2xl"
+        >
+          Nancy
+        </div>
+      </div>
+      <div
+        class="hover_figure group hover_murray absolute w-[4%] h-[20%] bg-transparent top-[69%] left-[42%] z-10 before:bg-transparent before:hidden hover:before:block before:left-[-60%] before:top-[-30%] before:w-[150%] before:h-[100%] before:absolute before:content-['']"
+      >
+        <div
+          class="absolute hidden group-hover:block duration-300 top-[-27%] shadow-itemShadownActive left-[-100%] md:text-3xl hover:cursor-pointer hover:scale-110 bg-black text-primary font-bold font-second p-[17%] rounded-2xl"
+        >
+          Murray
+        </div>
+      </div>
+      <img
+        class="top-0 w-full characters_bg"
+        src="./assets/imgs/character_background.jpg"
+        F
+        alt=""
+      />
+      <img
+        class="argyle absolute top-0 opacity-0"
+        src="./assets/imgs/crop_argyle.jpg"
+        alt=""
+      />
+      <img
+        class="dustin absolute top-0 opacity-0"
+        src="./assets/imgs/crop_dustin.jpg"
+        alt=""
+      />
+      <img
+        class="eddie absolute top-0 opacity-0"
+        src="./assets/imgs/crop_eddie.jpg"
+        alt=""
+      />
+      <img
+        class="eleven absolute top-0 opacity-0"
+        src="./assets/imgs/crop_eleven.jpg"
+        alt=""
+      />
+      <img
+        class="erica absolute top-0 opacity-0"
+        src="./assets/imgs/crop_erica.jpg"
+        alt=""
+      />
+      <img
+        class="hopper absolute top-0 opacity-0"
+        src="./assets/imgs/crop_hopper.jpg"
+        alt=""
+      />
+      <img
+        class="jonathan absolute top-0 opacity-0"
+        src="./assets/imgs/crop_jonathan.jpg"
+        alt=""
+      />
+      <img
+        class="joyce absolute top-0 opacity-0"
+        src="./assets/imgs/crop_joyce.jpg"
+        alt=""
+      />
+      <img
+        class="lucas absolute top-0 opacity-0"
+        src="./assets/imgs/crop_lucas.jpg"
+        alt=""
+      />
+      <img
+        class="max absolute top-0 opacity-0"
+        src="./assets/imgs/crop_max.jpg"
+        alt=""
+      />
+      <img
+        class="mike absolute top-0 opacity-0"
+        src="./assets/imgs/crop_mike.jpg"
+        alt=""
+      />
+      <img
+        class="murray absolute top-0 opacity-0"
+        src="./assets/imgs/crop_murray.jpg"
+        alt=""
+      />
+      <img
+        class="nancy absolute top-0 opacity-0"
+        src="./assets/imgs/crop_nancy.jpg"
+        alt=""
+      />
+      <img
+        class="robin absolute top-0 opacity-0"
+        src="./assets/imgs/crop_robin.jpg"
+        alt=""
+      />
+      <img
+        class="steven absolute top-0 opacity-0"
+        src="./assets/imgs/crop_steve.jpg"
+        alt=""
+      />
+      <img
+        class="will absolute top-0 opacity-0"
+        src="./assets/imgs/crop_will.jpg"
+        alt=""
+      />
+      <div class="bg-recap w-full h-full absolute"></div>
+      <div
+        class="content_character absolute w-[40%] bottom-0 py-[10rem] flex flex-col justify-center items-center cursor-default"
+      >
+        <h2
+          class="uppercase text-5xl md:text-7xl lg:text-9xl font-bold font-second text-red-700"
+        >
+          characters
+        </h2>
+        <p
+          class="text-xl sm:text-2xl md:text-3xl text-white relative animate-Move duration-300"
+        >
+          Select Hopper to explore.
+        </p>
+      </div>
+    </div>
+    <!-- Select Hopper -->
+    <div
+      class="book_swipper fixed z-50 top-0 bottom-0 h-screen w-full flex justify-center items-center bg-[rgba(0,0,0,0.8)] scale-0 duration-700 opacity-0"
+    >
+      <div class="swiper books">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              class="w-full h-full"
+              src="./assets/imgs/hopper_page_2.jpg"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              class="w-full h-full"
+              src="./assets/imgs/hopper_page_3.jpg"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              class="w-full h-full"
+              src="./assets/imgs/hopper_page_4.jpg"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              class="w-full h-full"
+              src="./assets/imgs/hopper_page_5.jpg"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              class="w-full h-full"
+              src="./assets/imgs/hopper_page_6.jpg"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              class="w-full h-full"
+              src="./assets/imgs/hopper_page_7.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <img
+        id="close_hopper"
+        class="absolute top-[2rem] right-[2rem] cursor-pointer opacity-60 hover:opacity-100"
+        style="-webkit-tap-highlight-color: transparent"
+        src="./assets/imgs/close_icon.png"
+        alt=""
+      />
+    </div>
+    <div
+      id="follow"
+      class="footer grid md:grid-rows-footer grid-rows-footer_mobile overflow-hidden relative"
+      style="background-image: url('./assets/imgs/trailer_background.jpg')"
+    >
+      <div class="row-span-1 w-full flex justify-center items-center">
+        <img
+          class="w-[25%] opacity-50"
+          src="./assets/imgs/navbar_logo.png"
+          alt=""
+        />
+      </div>
+      <div
+        class="row-span-2 grid grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 relative z-10 xl:border-t-2 border-[#474747]"
+      >
+        <div
+          class="xl:col-span-1 w-full border-b-2 border-[#474747] flex items-center justify-center xl:justify-between xl:px-[12%]"
+        >
+          <ul
+            class="gap-[1rem] sm:gap-[2rem] md:gap-[2.5rem] lg:gap-[3rem] xl:gap-[4rem] font-bold text-2xl sm:text-4xl lg:text-5xl xl:text-4xl uppercase flex justify-between items-center"
+          >
+            <li
+              class="hover:text-primary hover:top-[-2px] hover:scale-110 relative text-[#474747] duration-300"
+              style="-webkit-tap-highlight-color: transparent"
+            >
+              <a href="#recap">recap</a>
+            </li>
+            <li
+              class="hover:text-primary hover:top-[-2px] hover:scale-110 relative text-[#474747] duration-300"
+              style="-webkit-tap-highlight-color: transparent"
+            >
+              <a href="#characters">characters</a>
+            </li>
+            <li
+              class="hover:text-primary hover:top-[-2px] hover:scale-110 relative text-[#474747] duration-300"
+              style="-webkit-tap-highlight-color: transparent"
+            >
+              <a href="#">Cast</a>
+            </li>
+            <li
+              class="hover:text-primary hover:top-[-2px] hover:scale-110 relative text-[#474747] duration-300"
+              style="-webkit-tap-highlight-color: transparent"
+            >
+              <a href="#trailer">trailer</a>
+            </li>
+            <li
+              class="hover:text-primary hover:top-[-2px] hover:scale-110 relative text-[#474747] duration-300"
+              style="-webkit-tap-highlight-color: transparent"
+            >
+              <a href="#">Watch</a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="xl:col-span-1 row-span-2 xl:row-span-1 flex items-center justify-center xl:justify-end xl:px-[12%]"
+        >
+          <ul
+            class="gap-[1.5rem] sm:gap-[2rem] md:gap-[2.5rem] lg:gap-[3rem] xl:gap-[4rem] font-bold text-3xl sm:text-4xl lg:text-5xl xl:text-4xl uppercase flex justify-between items-center"
+          >
+            <li
+              class="hover:text-primary hover:top-[-2px] hover:scale-110 relative text-[#474747] duration-300 cursor-default"
+              style="-webkit-tap-highlight-color: transparent"
+            >
+              Follow
+            </li>
+            <li
+              class="hover:text-primary hover:top-[-2px] hover:scale-110 relative text-[#474747] duration-300"
+            >
+              <a href="https://www.facebook.com/phu.hong.779205">
+                <i class="text-4xl sm:text-5xl bx bxl-facebook-circle"></i>
+              </a>
+            </li>
+            <li
+              class="hover:text-primary hover:top-[-2px] hover:scale-110 relative text-[#474747] duration-300"
+            >
+              <a href="#">
+                <i class="text-4xl sm:text-5xl bx bxl-twitter"></i>
+              </a>
+            </li>
+            <li
+              class="hover:text-primary hover:top-[-2px] hover:scale-110 relative text-[#474747] duration-300"
+            >
+              <a href="#">
+                <i class="text-4xl sm:text-5xl bx bxl-youtube"></i>
+              </a>
+            </li>
+            <li
+              class="hover:text-primary hover:top-[-2px] hover:scale-110 relative text-[#474747] duration-300"
+            >
+              <a href="#">
+                <i class="text-4xl sm:text-5xl bx bxl-instagram-alt"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- <img class="" src="./assets/imgs/trailer_background.jpg" alt="" /> -->
+      <div class="bg-recap w-full h-full absolute"></div>
+    </div>
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="./main.js"></script>
+</html>
